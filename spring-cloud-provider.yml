@@ -1,6 +1,19 @@
 spring:
   profiles:
     active: dev
+  application:
+    name: spring-cloud-provider
+server:
+  port: 7000
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: spring-cloud-provider7000
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
 ---
 spring:
   profiles: dev
