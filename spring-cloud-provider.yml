@@ -6,6 +6,7 @@ spring:
   profiles: dev
 server:
   port: 7700
+env: dev
 ---
 spring:
   profiles: test
